@@ -4,7 +4,7 @@
 // ProfessionalForm.js
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateProfessionalDetails, selectProfessionalDetails,setDropdownOption} from 'redux\slices\slice.js';
+import { updateProfessionalDetails, selectProfessionalDetails,setDropdownOption} from '../../../../redux/slices/slice.js';
 import { Form, Input, Button, Select, Col, Row } from 'antd';
 
 const { Option } = Select;
@@ -32,20 +32,20 @@ const ProfessionalInfo = () => {
 
 <Form
   style={{ padding: "30px", border: "2px solid #eee" }}
-  className='m-40 w-[60%]'
+  className='m-40 w-[80%] '
   onFinish={handleSubmit}
    // Adjust the span value based on your layout
  // Adjust the span value based on your layout
 >
   <Form.Item 
-  labelCol={{ span: 4}}
     label="Designation"
+    
     name="designation"
     rules={[{ required: true, message: 'Please select a designation.' }]}
   >
     <Select
-     wrapperCol={{ span: 20}} 
-      className='rounded-none h-11 font-semibold mb-5 w-[40rem]'
+ 
+      className='rounded-none h-11 font-semibold mb-5  w-[25rem]'
       placeholder="Select Designation"
     >
       <Option value="option10">Option 10</Option>

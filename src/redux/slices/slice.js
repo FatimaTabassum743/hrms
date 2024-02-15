@@ -1,9 +1,8 @@
 // any slice
-// slices/professionalDetailsSlice.js
 'use client'
 import { createSlice } from '@reduxjs/toolkit';
 
-export const professionalDetailsSlice = createSlice({
+export const slice = createSlice({
   name: 'professionalDetails',
   initialState: {
     uanNumber: '',
@@ -20,8 +19,8 @@ export const professionalDetailsSlice = createSlice({
   },
 });
 
-export const { updateProfessionalDetails, setDropdownOption } = professionalDetailsSlice.actions;
+export const { updateProfessionalDetails, setDropdownOption } = slice.actions;
 
 export const selectProfessionalDetails = (state) => state.professionalDetails;
 
-export default professionalDetailsSlice.reducer;
+export default slice.reducer;
