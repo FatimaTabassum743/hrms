@@ -1,9 +1,12 @@
 import React from 'react'
+import ProfessionalInfo from './ProfessionalInfo'
 
-const Signup = () => {
+const page = () => {
   return (
-    <div>Signup page</div>
+    <div>
+      <ProfessionalInfo/>
+    </div>
   )
 }
 
-export default Signup
+export default page
