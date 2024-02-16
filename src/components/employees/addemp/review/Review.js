@@ -1,9 +1,9 @@
 'use client'
 import { Provider } from 'react-redux';
 import { store } from '../../../../redux/store/store';
-import ProfessionalRev from '../review/ProfessionalRev';
+import ProfessionalRev from './ProfessionalRev';
 
-function Form() {
+function Review() {
   return (
     <Provider store={store}>
      <ProfessionalRev/>
@@ -11,4 +11,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default Review;

@@ -7,19 +7,31 @@ export const slice = createSlice({
   initialState: {
     uanNumber: '',
     pfNumber: '',
-    selectedOption:'',
+    selectedDepartment: '',
+    selectedDesignation: '',
+    selectedReportingMngr: '', // Fix typo here
+    selectedworkLocation: '',
   },
   reducers: {
     updateProfessionalDetails: (state, action) => {
       return { ...state, ...action.payload };
     },
     setDropdownOption: (state, action) => {
-      state.selectedOption = action.payload;
+      state.selectedDepartment = action.payload;
+    },
+    setDropdownOptionDesig: (state, action) => {
+      state.selectedDesignation = action.payload;
+    },
+    setDropdownOptionReport: (state, action) => {
+      state.selectedReportingMngr = action.payload;
+    },
+    setDropdownOptionwork: (state, action) => {
+      state.selectedworkLocation = action.payload;
     },
   },
 });
 
-export const { updateProfessionalDetails, setDropdownOption } = slice.actions;
+export const { updateProfessionalDetails, setDropdownOption,setDropdownOptionDesig,setDropdownOptionwork,setDropdownOptionReport } = slice.actions;
 
 export const selectProfessionalDetails = (state) => state.professionalDetails;
 
