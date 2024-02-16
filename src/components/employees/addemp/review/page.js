@@ -1,14 +1,9 @@
-'use client'
-import { Provider } from 'react-redux';
-import { store } from '../../../../redux/store/store';
-import ProfessionalRev from '../review/ProfessionalRev';
+import React from 'react'
 
-function Form() {
+const page = () => {
   return (
-    <Provider store={store}>
-     <ProfessionalRev/>
-    </Provider>
-  );
+    <div>page</div>
+  )
 }
 
-export default Form;
+export default page

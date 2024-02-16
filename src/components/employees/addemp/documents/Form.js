@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 
 import ProfessionalInfo from './ProfessionalInfo';
 import { store } from '../../../../redux/store/store';
-import ProfessionalRev from '../review/ProfessionalRev';
 
 function Form() {
   return (
