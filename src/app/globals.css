@@ -2,4 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.ant-form-item-required::before {
+    display: none;
+  }
+  
+
 
