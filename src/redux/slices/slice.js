@@ -2,16 +2,22 @@
 'use client'
 import { createSlice } from '@reduxjs/toolkit';
 
+const initialState={
+  data:[{
+  uanNumber: '',
+  pfNumber: '',
+  selectedDepartment: '',
+  selectedDesignation: '',
+  selectedReportingMngr: '', // Fix typo here
+  selectedworkLocation: '',
+  }
+  ]
+}
+
+
 export const slice = createSlice({
   name: 'professionalDetails',
-  initialState: {
-    uanNumber: '',
-    pfNumber: '',
-    selectedDepartment: '',
-    selectedDesignation: '',
-    selectedReportingMngr: '', // Fix typo here
-    selectedworkLocation: '',
-  },
+  initialState:initialState,
   reducers: {
     updateProfessionalDetails: (state, action) => {
       return { ...state, ...action.payload };

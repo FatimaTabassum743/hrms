@@ -18,6 +18,7 @@ const ProfessionalInfo = () => {
   const dispatch = useDispatch();
   const professionalDetails = useSelector(selectProfessionalDetails);
 
+
   const handleChange = (name, value) => {
     dispatch(updateProfessionalDetails({ [name]: value }));
   };
@@ -41,7 +42,7 @@ const ProfessionalInfo = () => {
     const existingData = JSON.parse(localStorage.getItem('professionalDetails')) || {};
 
     // Merge existing data with the new data
-    const newData = { ...existingData, ...professionalDetails };
+    const newData = [{ ...existingData, ...professionalDetails }];
 
     // Save the merged data to local storage
     localStorage.setItem('professionalDetails', JSON.stringify(newData));
@@ -155,7 +156,7 @@ return (
       Next
     </Button>
   </Form.Item>
-<Link href="/ProfReview" className=' bg-blue-200'>Review</Link>
+<Link href="/ProfReview" className=' bg-blue-200 '><button>Review</button></Link>
 </Form>
 
 </div>

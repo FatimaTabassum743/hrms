@@ -1,21 +1,36 @@
+'use client'
 import React from 'react'
+import Link from 'next/link'
 import {useSelector}  from "react-redux";
 import { selectProfessionalDetails } from '@/redux/slices/slice';
 import {List,Button,Form} from "antd"
 const ProfessionalRev = () => {
     const professionalDetails = useSelector(selectProfessionalDetails);
-  return (
+    const existingData = JSON.parse(localStorage.getItem('professionalDetails')) || {};
+
+    // Merge existing data with the new data
+    const newData = [{ ...existingData, ...professionalDetails }];
+
+    // Save the merged data to local storage
+    localStorage.setItem('professionalDetails', JSON.stringify(newData));
+
+    console.log(newData);
+    const data=newData[newData.length-1]
+  
+    return (
   
          <div className='w-[80%] m-[40px]' style={{ border: '2px solid #eee', padding: '20px' }}>
   <h1 className='text-2xl font-semibold'>Professional Information</h1>
 <Form.Item>
-    <Button type="primary" htmlType="submit" className='rounded-md w-16 h-8 bg-blue-600 flex float-end'>
+   <Button type="primary"  htmlType="submit" className='rounded-md w-16 h-8 bg-blue-600 flex float-end'>
+    <Link href="/">
       Edit
+      </Link>
     </Button>
   </Form.Item>
         <List
           itemLayout="horizontal"
-          dataSource={[professionalDetails]} // Wrap professionalDetails in an array to iterate over it
+          dataSource={[data]} // Wrap professionalDetails in an array to iterate over it
           renderItem={(item) => (
             <List.Item>
               <List.Item.Meta
