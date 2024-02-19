@@ -17,14 +17,14 @@ const ProfessionalRev = () => {
     // console.log(newData);
     const data=professionalDetails[professionalDetails.length-1]
    function handleEdit(e){
-    e.preventDefault()
+
    }
     return (
   
          <div className='w-[80%] m-[40px]' style={{ border: '2px solid #eee', padding: '20px' }}>
   <h1 className='text-2xl font-semibold'>Professional Information</h1>
 <Form.Item>
-   <Button type="primary"  onClick={handleEdit} htmlType="button" className='rounded-md w-16 h-8 bg-blue-600 flex float-end'>
+   <Button type="primary"  onClick={handleEdit} htmlType="submit" className='rounded-md w-16 h-8 bg-blue-600 flex float-end'>
     <Link href="/">
       Edit
       </Link>

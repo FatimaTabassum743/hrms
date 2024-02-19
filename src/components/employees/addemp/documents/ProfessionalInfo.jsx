@@ -58,6 +58,7 @@ const ProfessionalInfo = () => {
 return (
 <div>
 <Form
+   requiredMark={false}
   style={{ padding: "50px", border: "2px solid #eee" }}
   className='m-20 w-[90%] '
   onFinish={handleSubmit}
