@@ -4,8 +4,12 @@
 // ProfessionalForm.js
 import React, { useState } from 'react';
 //import global css
+<<<<<<< HEAD
 import  { DatePickerProps } from 'antd';
 import { DatePicker, Space} from 'antd'
+=======
+
+>>>>>>> d31e86065e87f163c3d2958635f26b5a360a2fcd
 import { useDispatch, useSelector } from 'react-redux';
 import { updateProfessionalDetails, uanNumber,pfNumber,employeeId,selectProfessionalDetails, addToDataArray,setDropdownOption,
   setDropdownOptionDesig,setDropdownOptionwork,setDropdownOptionReport,setSelectedDate} from '../../../../redux/slices/slice.js';
@@ -82,17 +86,27 @@ return (
 <div>
 <Form
    requiredMark={false}
+<<<<<<< HEAD
   style={{ padding: "50px", border: "2px solid #eee",borderRadius:"none" }}
   className='m-20 w-[90%] rounded-none'
   onFinish={handleSubmit}
    >
        <Form.Item 
    className='w-[49.3rem] rounded-none '
+=======
+  style={{ padding: "50px", border: "2px solid #eee" }}
+  className='m-20 w-[90%] '
+  onFinish={handleSubmit}
+   >
+  <Form.Item 
+   className='w-[49.3rem] hide-required-star'
+>>>>>>> d31e86065e87f163c3d2958635f26b5a360a2fcd
     label="Designation"
     
     name="designation"
     rules={[{ required: true, message: 'Please select a designation.' }]}
   >
+<<<<<<< HEAD
    <Select
         showSearch
         style={{ width: 654, marginLeft:95}}
@@ -115,6 +129,19 @@ return (
       </Form.Item>
     
     
+=======
+    <Select
+ 
+      className='rounded-none h-11 font-semibold mb-5 ml-[11%]'
+      placeholder="Select Designation" value={selectedDesignation}
+      onChange={handleDesig}
+    >
+      <Option value="option10">Option 10</Option>
+      <Option value="option11">Option 11</Option>
+      <Option value="option12">Option 12</Option>
+    </Select>
+  </Form.Item>
+>>>>>>> d31e86065e87f163c3d2958635f26b5a360a2fcd
 
   <Row gutter={16}>
     <Col span={10}>
@@ -122,12 +149,17 @@ return (
         label="PF No (Optional)"
         name="pfNumber"
         rules={[
+<<<<<<< HEAD
           {  message: 'Enter Your PF Number' },
+=======
+          { required: true, message: 'Enter Your PF Number' },
+>>>>>>> d31e86065e87f163c3d2958635f26b5a360a2fcd
           { pattern: numberRegex, message: 'Please enter at least 5 digits for PF number.' },
         ]}
     
       >
         <Input
+<<<<<<< HEAD
            placeholder='Enter your PF number'
           className='ml-[70px] w-[250px] rounded-none'
           type="text"
@@ -149,36 +181,59 @@ return (
       >
         <Input
       placeholder='Enter Your UAN Number' className='w-[250px] rounded-none'
+=======
+          className='h-11 ml-12 w-[85%]'
+>>>>>>> d31e86065e87f163c3d2958635f26b5a360a2fcd
           type="text"
           value={professionalDetails.pfNumber}
           onChange={(e) => handleChange('pfNumber', e.target.value)}
         />
       </Form.Item>
     </Col>
+<<<<<<< HEAD
   </Row>
   <Form.Item
         label="Employee ID (Optional)"
         name="employeeId"
         rules={[
           { message: 'Enter Your Employee ID' },
+=======
+    <Col span={12}>
+      <Form.Item
+        label="UAN No (Optional)"
+        name="uanNumber"
+        rules={[
+          { required: true, message: 'Enter Your UAN Number' },
+>>>>>>> d31e86065e87f163c3d2958635f26b5a360a2fcd
           { pattern: numberRegex, message: 'Please enter at least 5 digits for UAN number.' },
         ]}
     
       >
+<<<<<<< HEAD
          <Input
           placeholder='Enter Your Employee ID' className=' rounded-none w-[652px] ml-[30px]'
+=======
+        <Input
+          className='h-11 w-[85%]'
+>>>>>>> d31e86065e87f163c3d2958635f26b5a360a2fcd
           type="text"
           value={professionalDetails.employeeId}
           onChange={(e) => handleChange('employeeId', e.target.value)}
         />
 
+<<<<<<< HEAD
       </Form.Item>
       <Form.Item
   className='w-[49rem] rounded-none'
+=======
+  <Form.Item
+  className='w-[49rem]'
+>>>>>>> d31e86065e87f163c3d2958635f26b5a360a2fcd
     label="Department"
     name="department"
     rules={[{ required: true, message: 'Please select a department.' }]}
   >
+<<<<<<< HEAD
       <Select
         showSearch
         style={{ width: 652, marginLeft:100, borderRadius:0}}
@@ -200,11 +255,22 @@ return (
       </Select>
       </Form.Item>
       <Form.Item
+=======
+    <Select placeholder="Select Department" className='ml-20 rounded-none mb-5 font-semibold h-11' value={selectedDepartment} onChange={handleSelectChange}>
+      <Option value="option1">Option 1</Option>
+      <Option value="option2">Option 2</Option>
+      <Option value="option3">Option 3</Option>
+    </Select>
+  </Form.Item>
+
+  <Form.Item
+>>>>>>> d31e86065e87f163c3d2958635f26b5a360a2fcd
     className='w-[54rem]'
     label=" Direct Reporting Manager"
     name="reportingManager"
     rules={[{ required: true, message: 'Please select a reporting manager.' }]}
   >
+<<<<<<< HEAD
 
   <Select
         showSearch
@@ -227,17 +293,36 @@ return (
       </Select>
       </Form.Item>
       <Form.Item
+=======
+    <Select placeholder="Select Reporting Manager" className='h-11 ml-15 rounded-none mb-5' value={selectedReportingMngr} onChange={handlReportk}>
+      <Option value="option4">Option 4</Option>
+      <Option value="option5">Option 5</Option>
+      <Option value="option6">Option 6</Option>
+    </Select>
+  </Form.Item>
+
+  <Form.Item
+>>>>>>> d31e86065e87f163c3d2958635f26b5a360a2fcd
   className='w-[50rem]'
     label="Work Location"
     name="workLocation"
     rules={[{ required: true, message: 'Please select a work location.' }]}
   >
+<<<<<<< HEAD
   <Select
         showSearch
         style={{ width: 652,marginLeft:85, borderRadius:0}}
         className='rounded-none'
         onChange={handlework}
          value={selectedworkLocation} 
+=======
+    <Select placeholder="Select Work Location" className=' ml-[10%] h-11 rounded-none' onChange={handlework} value={selectedworkLocation} >
+      <Option value="option7">Option 7</Option>
+      <Option value="option8">Option 8</Option>
+      <Option value="option9">Option 9</Option>
+    </Select>
+  </Form.Item>
+>>>>>>> d31e86065e87f163c3d2958635f26b5a360a2fcd
 
         placeholder=" Select Work Location "
         optionFilterProp="children"
