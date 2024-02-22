@@ -6,6 +6,7 @@ import ProfessionalRev from '../../components/employees/addemp/review/Profession
 function page() {
   return (
     <Provider store={store}>
+
      <ProfessionalRev/>
     </Provider>
   );

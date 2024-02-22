@@ -1,8 +1,7 @@
 'use client'
 import { Provider } from 'react-redux';
-
 import ProfessionalInfo from './ProfessionalInfo';
-import { store } from '../../../../redux/store/store';
+import {store} from '../../../../redux/store/store';
 
 function Form() {
   return (

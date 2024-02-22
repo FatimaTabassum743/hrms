@@ -1,11 +1,15 @@
-import Form from "@/components/employees/addemp/documents/Form";
-
-
-
-export default function Home() {
+"use client"
+import Form from '../components/employees/addemp/documents/ProfessionalInfo'
+import React from 'react'
+import {Provider} from 'react-redux'
+import {store} from '../redux/store/store'
+import ProfessionalInfo from '../components/employees/addemp/documents/ProfessionalInfo'
+const page = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-  <Form/>
-        </main>
-  );
+     <Provider store={store}>
+      <ProfessionalInfo/>
+       </Provider> 
+  )
 }
+
+export default page
