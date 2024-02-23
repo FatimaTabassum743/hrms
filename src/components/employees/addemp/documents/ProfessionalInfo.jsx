@@ -48,7 +48,7 @@ const ProfessionalInfo = () => {
   };
 
   const handleSubmit = () => {
-    dispatch(addToDataArray())
+    dispatch(addToDataArray(professionalDetails.data))
     console.log(professionalDetails);
     // Retrieve existing data from local storage
     const existingData = JSON.parse(localStorage.getItem('professionalDetails')) || {};

@@ -5,15 +5,15 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState={
   data:[
   ],
-  data1:{
-  uanNumber: '',
-  pfNumber: '',
-  employeeId:'',
-  selectedDepartment: '',
-  selectedDesignation: '',
-  selectedReportingMngr: '', // Fix typo here
-  selectedworkLocation: '',
-  }
+  // data1:{
+  // uanNumber: '',
+  // pfNumber: '',
+  // employeeId:'',
+  // selectedDepartment: '',
+  // selectedDesignation: '',
+  // selectedReportingMngr: '', // Fix typo here
+  // selectedworkLocation: '',
+  // }
 
 }
 
@@ -34,16 +34,6 @@ state.data=state.data.map((item)=>{
   item.uanNumber===action.payload.uanNumber?action.payload:item
 });
 },
-
-    // uanNumber: (state, action) => {
-    //   state.uanNumber = action.payload;
-    // },
-    // pfNumber: (state, action) => {
-    //   state.pfNumber = action.payload;
-    // },
-    // employeeId: (state, action) => {
-    //   state.employeeId = action.payload;
-    // },
     setDropdownOption: (state, action) => {
       state.selectedDepartment = action.payload;
     },
