@@ -76,10 +76,12 @@ const ProfessionalRev = () => {
                   
                     </div>
                     <div className='flex flex-col gap-4'>
-                      <h1 className='font-extralight text-xl'>Date</h1>
+                      <h1 className='font-extralight text-xl'>Started Date</h1>
                       <h1 className='text-xl font-semibold'>{item.selectedDate}</h1>
+                   
                   
                     </div>
+                    <div className='w-[210%] bg-gray-200 h-[1px]'></div>
                   </div>
                 }
               />
