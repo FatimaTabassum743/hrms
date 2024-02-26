@@ -2,8 +2,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState={
-  data:[
-  ],
+  // data:[
+  // ],
   // data1:{
   // uanNumber: '',
   // pfNumber: '',
@@ -24,15 +24,15 @@ export const slice = createSlice({
     updateProfessionalDetails: (state, action) => {
       return { ...state, ...action.payload };
     },
-    getdata:(state,action)=>{
-      state.data1=state.data.find((item)=>item.uanNumber==action.payload)
-  },
+//     getdata:(state,action)=>{
+//       state.data1=state.data.find((item)=>item.uanNumber==action.payload)
+//   },
  
-updatedata:(state,action)=>{
-state.data=state.data.map((item)=>{
-  item.uanNumber===action.payload.uanNumber?action.payload:item
-});
-},
+// updatedata:(state,action)=>{
+// state.data=state.data.map((item)=>{
+//   item.uanNumber===action.payload.uanNumber?action.payload:item
+// });
+// },
     setDropdownOption: (state, action) => {
       state.selectedDepartment = action.payload;
     },
@@ -48,19 +48,19 @@ state.data=state.data.map((item)=>{
     setSelectedDate: (state, action) => {
       state.selectedDate = action.payload;
     },
-    addToDataArray: (state) => {
-      state.data.push({
-        // updateProfessionalDetails:state.updateProfessionalDetails,
-        uanNumber:state.uanNumber,
-        pfNumber:state.pfNumber,
-        employeeId:state.employeeId,
-        selectedDepartment: state.selectedDepartment,
-        selectedDesignation: state.selectedDesignation,
-        selectedReportingMngr: state.selectedReportingMngr,
-        selectedworkLocation: state.selectedworkLocation,
-        selectedDate: state.selectedDate,
-    });
-    },
+    // addToDataArray: (state) => {
+    //   state.data.push({
+    //     // updateProfessionalDetails:state.updateProfessionalDetails,
+    //     uanNumber:state.uanNumber,
+    //     pfNumber:state.pfNumber,
+    //     employeeId:state.employeeId,
+    //     selectedDepartment: state.selectedDepartment,
+    //     selectedDesignation: state.selectedDesignation,
+    //     selectedReportingMngr: state.selectedReportingMngr,
+    //     selectedworkLocation: state.selectedworkLocation,
+    //     selectedDate: state.selectedDate,
+    // });
+    // },
   },
 });
 
